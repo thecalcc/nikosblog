@@ -11,14 +11,22 @@
   position: relative;
 }
 
-.site-title::before {
-  content: url("../../assets/logo-nikosblog-svg-black.svg");
-  display: inline-block;
-  height: 32px;
-  width: 32px;
-  position: relative;
-  margin-right: 2px;
+.site-logo {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    margin-left: 2px;
 }
+
+//.site-title::before {
+//  content: url("../../assets/logo-nikosblog-svg-black.svg");
+//  display: inline-block;
+//  height: 32px;
+//  width: 32px;
+//  position: relative;
+//  margin-left: 2px;
+//}
 
 .site-title {
   @include relative-font-size(1.625);
