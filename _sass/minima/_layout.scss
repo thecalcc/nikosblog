@@ -36,7 +36,7 @@
 }
 
 .site-title::before {
-  content: url("/assets/nikom-logo-2.svg");
+  content: url(/assets/nikom-logo-2.svg);
   display: inline-block;
   height: 44px;
   width: 44px;
