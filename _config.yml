@@ -1,9 +1,9 @@
-title: Блогът на Нико
+title: Блог НикоМ
 author:
-  name: Нико М
+  name: НикоМ
   email: niko@nikosblog.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  Блогът на Нико. Тук той споделя усещането си за света.
+  Собствената сянка, която ни преследва цял живот.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -14,7 +14,7 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: nikosblog
+    # twitter: nikosblog
     # github:  jekyll
     # devto: jekyll
     # dribbble: jekyll
@@ -47,8 +47,8 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+header_pages:
+ - about.md
 
 # Build settings
 theme: minima
