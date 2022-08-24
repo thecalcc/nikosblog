@@ -1,73 +1,56 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<div class="home">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{% include head.html %}
 
-  {{ content }}
+<body>
+<div>
+  <header class="header-background">
+    <div class="clearfix border-bottom-thick header-border">
+      <ul class="list-reset right py-1 header-text font-smoothing">
+        {% for my_page in site.pages %}
+        {% if my_page.title %}
+        <li class="inline-block">
+          <a class="align-middle link-primary header-link mr-2" href="{{ my_page.url | prepend: site.baseurl }}">{{
+            my_page.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="container mx-auto px-2 mb-2 clearfix header-text">
+      <h1 class="h0 inline-block col-6 sm-width-full py-2 mt-2 header-title">{{ site.title }}</h1>
+      <img class="img-responsive h0 inline-block sm-width-full" alt="nikosm-shadow" src="/assets/nikosm-shadow-steps" width="380"/>
+      <div class="clearfix mb-4 py-1">
+        <div class="inline-block mt-3 mr-1">
+          {% include dot-accent.html %}
+        </div>
+        <div class="inline-block mt-3 mr-1">
+          {% include dot-accent.html %}
+        </div>
+        <div class="inline-block mt-3">
+          {% include github.html %}
+        </div>
+        <p class="h4 lh-condensed font-smoothing mt-2 py-1 border-top-thin">{{ site.description }}</p>
+      </div>
 
+    </div>
+  </header>
 
-  {% if site.paginate %}
-  {% assign posts = paginator.posts %}
-  {% else %}
-  {% assign posts = site.posts %}
-  {% endif %}
+<!--  <div class="container px-2">-->
+<!--    <img class="img-responsive " alt="nikosm-shadow" src="/assets/nikosm-shadow-steps" width="380"/>-->
+<!--  </div>-->
 
-  <div class="split left">
-    <img class="shadow-img" alt="shadow" src="{{ "/assets/nikom-shadow" | relative_url }}" />
+  <div class="container mx-auto px-2 py-4">
+    {% for post in site.posts %}
+    {% include post_block.html %}
+    {% endfor %}
   </div>
 
-  <div class="split right">
-    {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-    <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  </div>
+</div>
 
-  {% if site.paginate %}
-  <div class="pager">
-    <ul class="pagination">
-      {%- if paginator.previous_page %}
-      <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page
-        }}</a></li>
-      {%- else %}
-      <li>
-        <div class="pager-edge">•</div>
-      </li>
-      {%- endif %}
-      <li>
-        <div class="current-page">{{ paginator.page }}</div>
-      </li>
-      {%- if paginator.next_page %}
-      <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-      {%- else %}
-      <li>
-        <div class="pager-edge">•</div>
-      </li>
-      {%- endif %}
-    </ul>
-  </div>
-  {%- endif %}
+{% include footer.html %}
 
-  {%- endif -%}
+</body>
 
-</>
+</html>
