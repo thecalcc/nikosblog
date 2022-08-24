@@ -16,5 +16,8 @@ social_username: nikosm
 # black (default), blue, gray, magenta, orange, red, white, and yellow.
 theme_color: white
 
+kramdown:
+  input: Karmdown
+  parse_block_html: true
 # Build settings
 #markdown: kramdown
