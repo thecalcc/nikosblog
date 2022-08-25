@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html>
-
 {% include head.html %}
 <head>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="icon" type="image/svg" href="/favico.svg">
+  <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 </head>
 <body>
 <div style="background-color: #F2935C;">
   <header class="header-background">
     <div class="clearfix border-bottom-thick header-border">
-      <ul class="list-reset right py-1 header-text font-smoothing">
-        {% for my_page in site.pages %}
-        {% if my_page.title %}
-        <li class="inline-block">
-          <a class="align-middle link-primary header-link mr-2"  style="font-size: 24px" href="{{ my_page.url | prepend: site.baseurl }}">{{
-            my_page.title }}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
+      <div class="d-inline-flex p-2">
+        <div class="d-inline-flex p-2">
+          <img alt="nikosm-logo" width="48px" src="/favico.svg">
+        </div>
+        <div class="d-inline-flex p-2">
+          <ul class="list-reset right py-1 header-text font-smoothing">
+            {% for my_page in site.pages %}
+            {% if my_page.title %}
+            <li class="inline-block">
+              <a class="align-middle link-primary header-link mr-2" style="font-size: 24px"
+                 href="{{ my_page.url | prepend: site.baseurl }}">{{
+                my_page.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="container mx-auto px-2 mb-2 clearfix header-text">
       <div class="container">
-        <h2
-          style="font-size: 50px; font-weight: 600"
-          class="h1 col-9 mt-2 header-title">
-          {{ site.title }}
-        </h2>
+        <div class="d-inline-flex p-2">
+          <h2
+            style="font-size: 50px; margin-right: -60px; margin-left: -15px;  font-weight: 300"
+            class="h1 col-9 mt-2 header-title">
+            {{ site.title1 }}
+          </h2>
+          <h2
+            style="font-size: 50px; font-weight: 600"
+            class="h1 col-9 mt-2 header-title">
+            {{ site.title2 }}
+          </h2>
+
+        </div>
         <img style="max-width: 100%; height: auto"
              class="img-fluid" alt="nikosm-shadow" src="/assets/nikosm-shadow-steps"
              width="700"/>
+        <a class="row vcenter" href="#posts" style="color: #ffffff; z-index: 0; margin-top: -25px">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-down"
+               viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          </svg>
+        </a>
       </div>
       <div class="clearfix mb-4 py-1">
         <div class="inline-block mt-3 mr-1">
@@ -43,10 +68,9 @@
         </div>
         <p class="h3 lh-condensed font-smoothing mt-2 py-1 border-top-thin">{{ site.description }}</p>
       </div>
-
     </div>
   </header>
-  <div class="container mx-auto px-2 py-4" style="background-color: #F2935C; color: white">
+  <div id="posts" class="container mx-auto px-2 py-4" style="background-color: #F2935C; color: white">
     {% for post in site.posts %}
     {% include post_block.html %}
     {% endfor %}
