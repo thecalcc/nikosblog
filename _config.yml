@@ -14,6 +14,7 @@ social_link: twitter
 social_username: nikosm
 
 # black (default), blue, gray, magenta, orange, red, white, and yellow.
+remote_theme: broccolini/swiss
 theme_color: white
 
 kramdown:
@@ -21,3 +22,6 @@ kramdown:
   parse_block_html: true
 # Build settings
 #markdown: kramdown
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
