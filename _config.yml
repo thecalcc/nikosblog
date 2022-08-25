@@ -2,6 +2,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Блог НикосМ
+title1: Блог
+title2: НикосМ
 description: Собствената сянка, която ни преследва цял живот.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
