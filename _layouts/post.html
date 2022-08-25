@@ -20,10 +20,24 @@ layout: default
 </article>
 
 <div class="container mx-auto px-2 py-2 clearfix">
-  <div class="commentbox"></div>
-  <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-  <script>commentBox('5635790897938432-proj')</script>
+  <div
+    id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="06d0816f-8db2-415b-9f29-d8b01a260418"
+    data-page-id="{{ page.id }}"
+    data-page-url="{{ page.url }}"
+    data-page-title="{{ page.title }}"
+  ></div>
+  +
+  <script defer src="https://cusdis.com/js/widget/lang/bg.js"></script>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 </div>
+
+<!--<div class="container mx-auto px-2 py-2 clearfix">-->
+<!--  <div class="commentbox"></div>-->
+<!--  <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>-->
+<!--  <script>commentBox('5635790897938432-proj')</script>-->
+<!--</div>-->
 
 <div class="container mx-auto px-2 py-2 clearfix">
   {% include previous-next.html %}
