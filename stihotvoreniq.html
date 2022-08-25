@@ -1,0 +1,15 @@
+---
+layout: page
+title: Стихотворения
+permalink: /stihotvoreniq
+---
+
+{% for post in site.categories.stihotvorenie %}
+<li style="list-style: none">
+  <a href="{{ post.url }}" style="text-decoration: none;">
+    <h2 class="category-link">
+      {{ post.title }} • {{post.date | date_to_string}}
+    </h2>
+  </a>
+</li>
+{% endfor %}

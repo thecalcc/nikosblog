@@ -11,9 +11,11 @@ email: nikosm@nikosm.space # the GitHub repo name for your project
 github_username: thecalcc
 mainimage: /assets/nikom-logo-2.svg
 
-
 social_link: twitter
 social_username: nikosm
+
+categories:
+  - stihotvorenie
 
 # black (default), blue, gray, magenta, orange, red, white, and yellow.
 remote_theme: broccolini/swiss
