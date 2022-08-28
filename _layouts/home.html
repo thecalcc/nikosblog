@@ -2,13 +2,12 @@
 <html>
 {% include head.html %}
 <head>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="icon" type="image/svg" href="/favico.svg">
   <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 </head>
 <body>
-<div style="background-color: #F2935C;">
+<div style="background-color: #F2935C; font-family: ">
   <header class="header-background">
     <div class="clearfix border-bottom-thick header-border">
       <div class="d-inline-flex p-2">
@@ -33,17 +32,16 @@
     <div class="container mx-auto px-2 mb-2 clearfix header-text">
       <div class="container">
         <div class="d-inline-flex p-2">
-          <h2
-            style="font-size: 50px; margin-right: -60px; margin-left: -15px;  font-weight: 300"
-            class="h1 col-9 mt-2 header-title">
-            {{ site.title1 }}
-          </h2>
-          <h2
-            style="font-size: 50px; font-weight: 600"
-            class="h1 col-9 mt-2 header-title">
-            {{ site.title2 }}
-          </h2>
-
+          <div class="p-2" lang="bg">
+            <h2
+              style="font-size: 50px; font-weight: 300; margin-left: -20px"
+              class="h1 col-9 mt-2 header-title">
+              {{ site.title1 }}
+            </h2>
+          </div>
+          <div class="p-2" lang="bg">
+            <h2 style="font-size: 50px; font-weight: 600" class="h1 col-9 mt-2 header-title">{{ site.title2 }}</h2>
+          </div>
         </div>
         <img style="max-width: 100%; height: auto"
              class="img-fluid" alt="nikosm-shadow" src="/assets/nikosm-shadow-steps"
@@ -66,7 +64,7 @@
         <div class="inline-block mt-3">
           {% include github.html %}
         </div>
-        <p class="h3 lh-condensed font-smoothing mt-2 py-1 border-top-thin">{{ site.description }}</p>
+        <p class="h3 lh-condensed font-smoothing mt-2 py-1 border-top-thin"></p>
       </div>
     </div>
   </header>
