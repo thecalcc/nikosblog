@@ -16,7 +16,6 @@ button {
   line-height: inherit;
 }
 
-
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -24,17 +23,16 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-//@font-face {
-//  font-family: 'CustomMontserrat';
-//  src: url(/assets/fonts/Montserrat-Regular.ttf);
-//  font-feature-settings: 'ss01';
-//}
+@font-face {
+  font-family: 'SofiaSans';
+  src: url('/assets/fonts/sofia-sans-regular.ttf');
+}
 
 /**
  * Basic styling
  */
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: $body-font-family;
   font-size: $body-font-size;
   line-height: 1.5;
   color: $color-body-text;
