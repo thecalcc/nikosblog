@@ -1,6 +1,32 @@
 ---
 layout: default
 ---
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#testing").on("contextmenu",function(e){
+      return false;
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#testing').bind('cut copy paste', function (e) {
+      e.preventDefault();
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#testing').bind('cut copy paste', function (e) {
+      e.preventDefault();
+    });
+
+    $("#testing").on("contextmenu",function(e){
+      return false;
+    });
+  });
+</script>
 
 <style>
   @font-face {
@@ -8,12 +34,12 @@ layout: default
     src: url('/assets/fonts/sofia-sans-regular.ttf');
   }
 </style>
-<article class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting" style="font-family: 'SofiaSans', serif">
+<article id="testing" class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting" style="font-family: 'SofiaSans', serif">
   <h1  class="h0 col-10 sm-width-full py-4 mt-3 inline-block" itemprop="name headline" style="margin-bottom: -16px">{{ page.title }}</h1>
   <div class="col-4 sm-width-full">
     <img class="img-fluid mb-3" alt="stones" src="/assets/stones.png" style="padding-top: 10px"/>
   </div>
-  <div class="prose" itemprop="articleBody">
+  <div class="prose" itemprop="articleBody" style="font-size: 18px">
     {{ content }}
   </div>
 </article>
