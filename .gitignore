@@ -9,7 +9,6 @@ _site/
 vendor/
 Gemfile
 Gemfile.lock
-/.idea/
 # Gems
 *.gem
 
@@ -21,3 +20,4 @@ Gemfile.lock
 .Trashes
 ehthumbs.db
 Thumbs.db
+.idea/
